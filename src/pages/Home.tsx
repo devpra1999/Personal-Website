@@ -1,64 +1,85 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Eye, Download } from 'lucide-react'
 
 const Home: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-          Dev Prakash Srivastava
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
-          Economics & Finance Research
-        </p>
-        <p className="text-lg text-gray-500 dark:text-gray-400 mb-8">
-          Aspiring PhD Candidate | M.Sc. Economics & Social Sciences, Bocconi University
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-4 text-sm mb-12">
-          <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-            IIT Kanpur Graduate
-          </span>
-          <span className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">
-            Bocconi University
-          </span>
-          <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">
-            Research Experience
-          </span>
-          <span className="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full">
-            GRE: 337/340
-          </span>
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            Academic Journey
-          </h2>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            Currently pursuing advanced research in Economics and Finance with a focus on 
-            macroeconomics, financial econometrics, and computational methods. 
-            My academic journey spans from engineering at IIT Kanpur to specialized 
-            economics research at Bocconi University.
-          </p>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            Building expertise in term structure models, demographic economics, and 
-            sentiment analysis for financial markets.
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Hero Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          {/* Profile Photo */}
+          <div className="mb-8">
+            <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+              DS
+            </div>
           </div>
-        </div>
-        
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            Research Focus
-          </h2>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            My research interests lie at the intersection of macroeconomics and finance, 
-            with particular emphasis on term structure modeling, demographic impacts on 
-            fiscal sustainability, and the application of machine learning in financial markets.
+          
+          {/* Name and Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+            Dev Prakash Srivastava
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+            Researcher in Economics and Finance, PhD Applicant
           </p>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            Exploring cutting-edge methods in econometrics and computational finance 
-            under the guidance of leading researchers.
+          
+          {/* Description */}
+          <div className="max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+              Economics researcher specializing in macroeconomics, financial econometrics, and 
+              demographic economics. Currently pursuing advanced research at Bocconi University, 
+              with extensive experience in quantitative modeling, term structure analysis, and portfolio 
+              optimization.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              Passionate about understanding the intersection of demographics, fiscal sustainability, 
+              and financial markets through rigorous empirical analysis and innovative computational 
+              methods.
+            </p>
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Link to="/research" className="btn-primary">
+              <Eye className="h-5 w-5 mr-2" />
+              View Research
+            </Link>
+            <a 
+              href="/cv.pdf" 
+              download="Dev_Prakash_Srivastava_CV.pdf"
+              className="btn-secondary"
+            >
+              <Download className="h-5 w-5 mr-2" />
+              Download CV
+            </a>
+          </div>
+          
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                4+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                Research Projects
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                108/110
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                MSc GPA (Bocconi)
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                337/340
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                GRE Score
+              </div>
+            </div>
           </div>
         </div>
       </div>
