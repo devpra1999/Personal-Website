@@ -177,7 +177,6 @@ const Blog: React.FC = () => {
         <p className="text-sm text-white/80 mt-2">
           <em>Newsletter functionality coming soon</em>
         </p>
-      </div>
     </div>
   )
 }
