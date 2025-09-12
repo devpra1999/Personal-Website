@@ -58,5 +58,16 @@ Preferred communication style: Simple, everyday language.
 - **Google Fonts**: Inter font family loaded via CDN
 - **Contact Form**: Currently static implementation (no backend integration)
 - **CV Download**: Placeholder for PDF download functionality
+- **Blog Integration**: Links to external Substack publication for research notes and insights
 
-Note: The application is currently frontend-only with no backend services, database connections, or external API integrations. All content is statically embedded in the React components.
+## Recent Changes
+
+### Blog Section Update (December 2024)
+- **Design**: Updated blog page to match modern card-based layout with grid structure
+- **Content**: Implemented 6 sample blog post cards with categories, dates, descriptions, and tags
+- **Integration**: Added Substack integration with external links to blog posts
+- **Categories**: Research Note (blue), Methodology (gray), Industry Insight (green), Tutorial (purple), Opinion (red)
+- **Features**: Clickable cards that open Substack articles in new tabs
+- **Layout**: Responsive 3-column grid (on desktop) that adapts to mobile devices
+
+Note: The application is currently frontend-only with no backend services, database connections, or external API integrations. All content is statically embedded in the React components. Blog posts link to external Substack publication.
