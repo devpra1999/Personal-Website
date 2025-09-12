@@ -1,183 +1,166 @@
 import React from 'react'
-import { Calendar, Clock, Tag } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
+
+interface BlogPost {
+  id: string
+  category: string
+  categoryColor: string
+  date: string
+  title: string
+  description: string
+  tags: string[]
+  substackUrl: string
+}
 
 const Blog: React.FC = () => {
+  // Sample blog posts data - you can replace these with your actual Substack articles
+  const blogPosts: BlogPost[] = [
+    {
+      id: '1',
+      category: 'Research Note',
+      categoryColor: 'bg-blue-500',
+      date: 'Dec 15, 2024',
+      title: 'Understanding Demographic Transitions and Fiscal Policy',
+      description: 'Exploring how aging populations affect government debt dynamics and the challenges facing European economies in maintaining fiscal sustainability...',
+      tags: ['Fiscal Policy', 'Demographics'],
+      substackUrl: 'https://yoursubstack.substack.com/p/demographic-transitions'
+    },
+    {
+      id: '2',
+      category: 'Methodology',
+      categoryColor: 'bg-gray-500',
+      date: 'Nov 28, 2024',
+      title: 'Random Matrix Theory in Portfolio Optimization',
+      description: 'A practical guide to implementing Marchenko-Pastur denoising techniques for improving covariance matrix estimation in high-dimensional portfolio problems...',
+      tags: ['Finance', 'Methods'],
+      substackUrl: 'https://yoursubstack.substack.com/p/random-matrix-theory'
+    },
+    {
+      id: '3',
+      category: 'Industry Insight',
+      categoryColor: 'bg-green-500',
+      date: 'Nov 10, 2024',
+      title: 'Central Bank Digital Currencies and Monetary Policy',
+      description: 'Analyzing the potential implications of CBDCs for traditional monetary transmission mechanisms and financial stability considerations...',
+      tags: ['Monetary Policy', 'Fintech'],
+      substackUrl: 'https://yoursubstack.substack.com/p/cbdc-monetary-policy'
+    },
+    {
+      id: '4',
+      category: 'Tutorial',
+      categoryColor: 'bg-purple-500',
+      date: 'Oct 22, 2024',
+      title: 'Building Interactive Economic Dashboards with RShiny',
+      description: 'Step-by-step guide to creating real-time economic monitoring tools using RShiny, with examples from sovereign bond market analysis...',
+      tags: ['R', 'Visualization'],
+      substackUrl: 'https://yoursubstack.substack.com/p/rshiny-dashboards'
+    },
+    {
+      id: '5',
+      category: 'Opinion',
+      categoryColor: 'bg-red-500',
+      date: 'Sep 30, 2024',
+      title: 'The Future of Economic Research: AI and Natural Language Processing',
+      description: 'Reflecting on how machine learning techniques are transforming empirical economics and the opportunities for sentiment analysis in financial markets...',
+      tags: ['AI/ML', 'Research'],
+      substackUrl: 'https://yoursubstack.substack.com/p/ai-economics-research'
+    },
+    {
+      id: '6',
+      category: 'Research Note',
+      categoryColor: 'bg-blue-500',
+      date: 'Sep 15, 2024',
+      title: 'Term Structure Modeling: From Theory to Practice',
+      description: 'Bridging the gap between affine term structure models and practical implementation, with insights from Euro Area and US government bond markets...',
+      tags: ['Term Structure', 'Bonds'],
+      substackUrl: 'https://yoursubstack.substack.com/p/term-structure-modeling'
+    }
+  ]
+
+  const handlePostClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="section-heading">Blog</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Insights on Economics, Finance, and Research
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Blog
+          </h1>
+          <div className="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+            Research notes, insights, and thoughts on economics, finance, and methodology
           </p>
         </div>
 
-      {/* Coming Soon Notice */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-8 text-center mb-8">
-        <h2 className="text-2xl font-semibold text-blue-900 dark:text-blue-100 mb-4">
-          Blog Coming Soon
-        </h2>
-        <p className="text-blue-800 dark:text-blue-200 mb-6">
-          I'm working on creating thoughtful content about economics research, 
-          academic insights, and the intersection of finance and technology. 
-          Stay tuned for upcoming posts!
-        </p>
-        <div className="flex flex-wrap justify-center gap-4 text-sm">
-          <span className="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-full">
-            Research Insights
-          </span>
-          <span className="px-3 py-1 bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200 rounded-full">
-            Academic Life
-          </span>
-          <span className="px-3 py-1 bg-purple-100 dark:bg-purple-800 text-purple-800 dark:text-purple-200 rounded-full">
-            Economic Theory
-          </span>
-          <span className="px-3 py-1 bg-orange-100 dark:bg-orange-800 text-orange-800 dark:text-orange-200 rounded-full">
-            Data Science
-          </span>
-        </div>
-      </div>
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogPosts.map((post) => (
+            <div
+              key={post.id}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-200 cursor-pointer"
+              onClick={() => handlePostClick(post.substackUrl)}
+            >
+              {/* Category Badge and Date */}
+              <div className="flex justify-between items-start mb-4">
+                <span className={`inline-block px-3 py-1 rounded-full text-white text-xs font-medium ${post.categoryColor}`}>
+                  {post.category}
+                </span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {post.date}
+                </span>
+              </div>
 
-      {/* Planned Content */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Planned Content Topics
-          </h3>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span className="text-gray-700 dark:text-gray-300 text-sm">
-                Understanding Term Structure Models in Modern Finance
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span className="text-gray-700 dark:text-gray-300 text-sm">
-                Demographic Transitions and Economic Policy
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span className="text-gray-700 dark:text-gray-300 text-sm">
-                Machine Learning Applications in Financial Markets
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span className="text-gray-700 dark:text-gray-300 text-sm">
-                My Journey from Engineering to Economics
-              </span>
-            </li>
-          </ul>
-        </div>
+              {/* Title */}
+              <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                {post.title}
+              </h3>
 
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Recent Research Highlights
-          </h3>
-          <div className="space-y-4">
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
-                Term Premia Estimation
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">
-                Insights from building interactive models for Euro Area bond markets
+              {/* Description */}
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                {post.description}
               </p>
-              <div className="flex items-center mt-2 text-xs text-gray-500 dark:text-gray-500">
-                <Calendar className="h-3 w-3 mr-1" />
-                <span>Research completed May 2024</span>
+
+              {/* Tags and Read More */}
+              <div className="flex flex-wrap items-center justify-between">
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {post.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                  Read more
+                  <ExternalLink className="h-3 w-3 ml-1" />
+                </div>
               </div>
             </div>
-            
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-medium text-gray-900 dark:text-white text-sm">
-                Sentiment Analysis in Finance
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">
-                Using NLP techniques for earnings call analysis and return prediction
-              </p>
-              <div className="flex items-center mt-2 text-xs text-gray-500 dark:text-gray-500">
-                <Calendar className="h-3 w-3 mr-1" />
-                <span>Ongoing research</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
 
-      {/* Sample Blog Post Structure */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-        <div className="flex items-center mb-4">
-          <Tag className="h-5 w-5 text-gray-500 mr-2" />
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Preview: Future Post Structure
-          </h3>
-        </div>
-        
-        <article className="prose prose-gray dark:prose-invert max-w-none">
-          <h4 className="text-gray-900 dark:text-white mb-2">
-            "The Role of Demographics in Shaping Economic Policy"
-          </h4>
-          <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-4 space-x-4">
-            <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-1" />
-              <span>March 2025 (Planned)</span>
-            </div>
-            <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-1" />
-              <span>8 min read</span>
-            </div>
-          </div>
-          
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            <em>Sample excerpt:</em> As societies around the world experience significant demographic 
-            shifts—aging populations, declining birth rates, and changing migration patterns—the 
-            implications for economic policy become increasingly complex. In my recent research 
-            on demographic-augmented models, I've explored how these population dynamics 
-            influence fiscal sustainability and long-term economic growth...
+        {/* Substack Subscribe Section */}
+        <div className="mt-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-8 text-center text-white">
+          <h3 className="text-2xl font-semibold mb-4">Follow on Substack</h3>
+          <p className="mb-6 max-w-2xl mx-auto">
+            Subscribe to my Substack for the latest research insights, economic analysis, 
+            and methodology discussions delivered directly to your inbox.
           </p>
-          
-          <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-              <strong>What you'll learn:</strong>
-            </p>
-            <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-              <li>• How demographic changes impact macroeconomic variables</li>
-              <li>• Policy implications of population aging</li>
-              <li>• Quantitative methods for demographic-economic modeling</li>
-              <li>• Case studies from Euro Area economies</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-
-      {/* Newsletter Signup Placeholder */}
-      <div className="mt-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-8 text-center text-white">
-        <h3 className="text-2xl font-semibold mb-4">Stay Updated</h3>
-        <p className="mb-6">
-          Get notified when new blog posts are published. I'll share insights from 
-          my research and thoughts on current developments in economics and finance.
-        </p>
-        <div className="max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Your email address"
-            className="w-full px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
-            disabled
-          />
-          <button 
-            className="px-6 py-2 bg-white/20 text-white rounded-r-lg hover:bg-white/30 transition-colors cursor-not-allowed"
-            disabled
+          <a
+            href="https://yoursubstack.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors"
           >
-            Subscribe
-          </button>
+            Visit My Substack
+            <ExternalLink className="h-4 w-4 ml-2" />
+          </a>
         </div>
-        <p className="text-sm text-white/80 mt-2">
-          <em>Newsletter functionality coming soon</em>
-        </p>
-      </div>
       </div>
     </div>
   )
