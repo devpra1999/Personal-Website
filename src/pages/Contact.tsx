@@ -20,22 +20,22 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Contact Me
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300">
-          Let's connect and discuss research opportunities
-        </p>
-      </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="section-heading">Contact</h1>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Let's connect and discuss research opportunities
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Contact Information */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-            Get in Touch
-          </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Contact Information */}
+          <div className="card">
+            <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
+              Get in Touch
+            </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-8">
             I'm always interested in discussing research opportunities, academic collaborations, 
             or PhD program inquiries. Feel free to reach out through any of the channels below.
@@ -100,11 +100,11 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-            Send a Message
-          </h2>
+          {/* Contact Form */}
+          <div className="card">
+            <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
+              Send a Message
+            </h2>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             <em>Note: This is a static form for demonstration purposes only.</em>
           </p>
@@ -190,9 +190,9 @@ const Contact: React.FC = () => {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-800"
+              className="btn-primary w-full"
             >
-              <Send className="h-5 w-5 mr-2" />
+              <Send className="h-4 w-4 mr-2" />
               Send Message
             </button>
           </form>
@@ -206,11 +206,11 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Research Areas of Interest */}
-      <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-          Areas of Interest for Collaboration
-        </h2>
+        {/* Research Areas of Interest */}
+        <div className="card mt-8">
+          <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
+            Areas of Interest for Collaboration
+          </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             'Macroeconomic-Financial Linkages',

@@ -3,15 +3,15 @@ import { Calendar, Clock, Tag } from 'lucide-react'
 
 const Blog: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Blog
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300">
-          Insights on Economics, Finance, and Research
-        </p>
-      </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="section-heading">Blog</h1>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Insights on Economics, Finance, and Research
+          </p>
+        </div>
 
       {/* Coming Soon Notice */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-8 text-center mb-8">
