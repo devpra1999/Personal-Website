@@ -1,27 +1,43 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import CV from './pages/CV'
 import Research from './pages/Research'
 import Teaching from './pages/Teaching'
-import Contact from './pages/Contact'
 import Blog from './pages/Blog'
+import CV from './pages/CV'
+import Contact from './pages/Contact'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="cv" element={<CV />} />
-        <Route path="research" element={<Research />} />
-        <Route path="teaching" element={<Teaching />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="blog" element={<Blog />} />
-      </Route>
-    </Routes>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Navigation />
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="research">
+          <Research />
+        </section>
+        <section id="teaching">
+          <Teaching />
+        </section>
+        <section id="blog">
+          <Blog />
+        </section>
+        <section id="cv">
+          <CV />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      <Footer />
+    </div>
   )
 }
 
