@@ -1,8 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Eye, Download } from 'lucide-react'
 
 const Home: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
@@ -40,10 +46,13 @@ const Home: React.FC = () => {
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link to="/research" className="btn-primary">
+            <button 
+              onClick={() => scrollToSection('research')} 
+              className="btn-primary"
+            >
               <Eye className="h-5 w-5 mr-2" />
               View Research
-            </Link>
+            </button>
             <a 
               href="/cv.pdf" 
               download="Dev_Prakash_Srivastava_CV.pdf"
