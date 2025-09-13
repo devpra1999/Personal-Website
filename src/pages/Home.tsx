@@ -12,12 +12,16 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
         <div className="text-center">
           {/* Profile Photo */}
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              DS
+          <div className="flex justify-center">
+            <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg border-4 border-white dark:border-gray-800">
+              <img 
+                src="/profile-photo.jpg" 
+                alt="Profile Photo" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
@@ -30,22 +34,27 @@ const Home: React.FC = () => {
           </p>
           
           {/* Description */}
-          <div className="max-w-3xl mx-auto mb-8">
+          <div className="max-w-4xl mx-auto mb-8">
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Economics researcher specializing in macroeconomics, financial econometrics, and 
-              demographic economics. Currently pursuing advanced research at Bocconi University, 
-              with extensive experience in quantitative modeling, term structure analysis, and portfolio 
+              I am an economics researcher at Bocconi University specializing in macroeconomics, financial econometrics, and 
+              demographic economics. I have extensive experience in quantitative modeling (including modern NLP and LLM techqniques), term structure analysis, and portfolio 
               optimization.
             </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+              My research interests span the intersection of demographics, fiscal sustainability, 
+              and financial markets, which I approach through rigorous empirical analysis and 
+              computational methods. My current research looks at how demographic transitions 
+              influence long-term economic trends and financial stability.
+            </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Passionate about understanding the intersection of demographics, fiscal sustainability, 
-              and financial markets through rigorous empirical analysis and innovative computational 
-              methods.
+              As I prepare to apply for PhD programs in Economics, I'm also exploring adjacent 
+              fields such as economic history and the application of computational methods to 
+              traditional economic questions.
             </p>
           </div>
           
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => scrollToSection('research')} 
               className="btn-primary"
@@ -63,7 +72,7 @@ const Home: React.FC = () => {
             </a>
           </div>
           
-          {/* Stats Section */}
+          {/* Stats Section
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
@@ -89,7 +98,7 @@ const Home: React.FC = () => {
                 GRE Score
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

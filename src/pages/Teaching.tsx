@@ -30,13 +30,14 @@ const Teaching: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+    <div className="bg-gray-50 dark:bg-gray-900 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="section-heading">Teaching</h1>
+
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Teaching assistant experience in advanced macroeconomics at Bocconi University
+            Teaching assistant experience at Bocconi University
           </p>
         </div>
 
@@ -59,26 +60,26 @@ const Teaching: React.FC = () => {
               Bocconi University
             </p>
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-              <strong>Instructors:</strong> Prof. Francesco Giavazzi & Prof. Carlo Favero
+              <strong>Instructors:</strong> Prof. Francesco Giavazzi & Prof. Carlo A. Favero
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
               <strong>Terms:</strong> Spring 2025, Spring 2026
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              <strong>Level:</strong> Graduate Course
+              <strong>Level:</strong> Undergraduate Course
             </div>
             
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
               Course Overview
             </h4>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              Advanced graduate-level course covering the intersection of fiscal policy and macroeconomic dynamics. 
+              Undergraduate-level course covering the intersection of fiscal policy and macroeconomic dynamics. 
               Topics include fiscal sustainability, debt dynamics, fiscal multipliers, and the interaction between monetary 
               and fiscal policy in different economic regimes.
             </p>
           </div>
           
-          {/* Teaching Responsibilities */}
+          {/* Teaching Responsibilities 
           <div className="mb-8">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-6">
               Teaching Responsibilities
@@ -95,7 +96,7 @@ const Teaching: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Skills & Tools Covered */}
           <div>
@@ -112,7 +113,7 @@ const Teaching: React.FC = () => {
           </div>
         </div>
 
-        {/* Teaching Philosophy & Future Interests */}
+        {/* Teaching Philosophy & Future Interests
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="card">
             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-4">
@@ -181,7 +182,7 @@ const Teaching: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </div>
   )
