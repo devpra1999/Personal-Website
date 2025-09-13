@@ -1,25 +1,55 @@
-import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
   const { theme, setTheme } = useTheme()
-  const location = useLocation()
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/research', label: 'Research' },
-    { href: '/teaching', label: 'Teaching' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/cv', label: 'CV' },
-    { href: '/contact', label: 'Contact' },
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#research', label: 'Research' },
+    { href: '#teaching', label: 'Teaching' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#cv', label: 'CV' },
+    { href: '#contact', label: 'Contact' },
   ]
 
-  const isActive = (href: string) => location.pathname === href
+  // Smooth scrolling function
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsOpen(false)
+  }
+
+  // Track active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.href.substring(1)) // Remove '#'
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top <= 100 && rect.bottom > 100
+        }
+        return false
+      })
+      
+      if (currentSection) {
+        setActiveSection(currentSection)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const isActive = (href: string) => activeSection === href.substring(1)
 
   const ThemeToggle = () => (
     <button
@@ -41,20 +71,20 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <button 
+              onClick={() => scrollToSection('#home')}
               className="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Dev P. Srivastava
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.href}
-                to={item.href}
+                onClick={() => scrollToSection(item.href)}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.href)
                     ? 'text-blue-600 dark:text-blue-400'
@@ -62,7 +92,7 @@ const Navigation: React.FC = () => {
                 }`}
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
             <ThemeToggle />
           </div>
@@ -92,18 +122,17 @@ const Navigation: React.FC = () => {
           >
             <div className="px-4 py-2 space-y-1 bg-white dark:bg-gray-900">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.href}
-                  to={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  onClick={() => scrollToSection(item.href)}
+                  className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                       : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                   }`}
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
             </div>
           </motion.div>
