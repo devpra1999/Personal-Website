@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   const onSubmit = (data: ContactFormData) => {
     // Static form - no backend functionality
     console.log('Contact form data:', data)
-    alert('Thank you for your message! This is a static form for demonstration purposes.')
+    //alert('Thank you for your message! This is a static form for demonstration purposes.')
     reset()
   }
 
@@ -37,8 +37,7 @@ const Contact: React.FC = () => {
               Get in Touch
             </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-8">
-            I'm always interested in discussing research opportunities, academic collaborations, 
-            or PhD program inquiries. Feel free to reach out through any of the channels below.
+            I'm always interested in discussing research opportunities or academic collaborations. Feel free to reach out through any of the channels below.
           </p>
 
           <div className="space-y-4">
@@ -163,7 +162,7 @@ const Contact: React.FC = () => {
                 className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white ${
                   errors.subject ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder="PhD inquiry, Research collaboration, etc."
+                placeholder="Research collaboration, etc."
               />
               {errors.subject && (
                 <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.subject.message}</p>
@@ -206,7 +205,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-        {/* Research Areas of Interest */}
+        {/* Research Areas of Interest 
         <div className="card mt-8">
           <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
             Areas of Interest for Collaboration
@@ -226,7 +225,7 @@ const Contact: React.FC = () => {
             </div>
           ))}
         </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

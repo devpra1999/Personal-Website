@@ -14,7 +14,7 @@ const CV: React.FC = () => {
         </div>
 
         {/* CV Document Access */}
-        <div className="card mb-12">
+        <div className="card mb-6">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -46,9 +46,8 @@ const CV: React.FC = () => {
           </div>
         </div>
 
-        {/* Education & Experience Overview */}
+        {/* Education & Experience Overview 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Education */}
           <div className="card">
             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
               Education
@@ -84,9 +83,9 @@ const CV: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* Key Experience */}
+          {/* Key Experience
           <div className="card">
             <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">
               Experience
@@ -123,7 +122,7 @@ const CV: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Skills & Competencies */}
         <div className="card">
@@ -136,7 +135,7 @@ const CV: React.FC = () => {
                 Programming & Statistical Software
               </h4>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'R', 'MATLAB', 'Stata', 'EViews', 'Julia'].map(skill => (
+                {['Python', 'R', 'MATLAB', 'Stata', 'SQL', 'Julia'].map(skill => (
                   <span key={skill} className="skill-badge">
                     {skill}
                   </span>
@@ -146,10 +145,10 @@ const CV: React.FC = () => {
             
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-                Economic Methods
+                Quantitative Methods
               </h4>
               <div className="flex flex-wrap gap-2">
-                {['Econometrics', 'Time Series Analysis', 'Panel Data', 'VAR Models', 'DSGE'].map(skill => (
+                {['Econometrics', 'Time Series Analysis', 'Panel Data', 'VAR Models', 'NLP', 'LLM'].map(skill => (
                   <span key={skill} className="skill-badge">
                     {skill}
                   </span>

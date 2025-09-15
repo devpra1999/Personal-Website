@@ -1,5 +1,5 @@
 import React from 'react'
-import { FileText, Code } from 'lucide-react'
+import { FileText, Code, Globe } from 'lucide-react'
 
 const Research: React.FC = () => {
   const currentProjects = [
@@ -10,7 +10,12 @@ const Research: React.FC = () => {
       status: 'Current',
       description: 'Constructing harmonized cross-country panel data (1950–present) for five Euro Area economies, covering demographic, macroeconomic, and fiscal indicators. Estimating demographic-augmented models of growth, real interest rates, and fiscal balances with simulations of debt dynamics under future demographic scenarios.',
       hasCode: true,
-      hasPaper: true
+      hasPaper: true,
+      hasArticle:false,
+      hasWebsite: true,
+      websiteLink: "https://devpra.shinyapps.io/Debt_Dynamics_Simulations/",
+      paperLink: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5388917",
+      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
     },
     {
       title: 'Sentiment Embeddings for Return Prediction',
@@ -19,7 +24,10 @@ const Research: React.FC = () => {
       status: 'Ongoing',
       description: 'Developing pipeline processing earnings call transcripts through sentiment-fine-tuned BERT model to generate firm-level sentiment embeddings. Augmenting with contextual information from regulatory filings using retrieval-augmented generation (RAG) techniques and exploring predictive power for asset returns.',
       hasCode: true,
-      hasPaper: false
+      hasPaper: false,
+      hasArticle:false,
+      hasWebsite: false,
+      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
     }
   ]
 
@@ -31,7 +39,11 @@ const Research: React.FC = () => {
       status: 'Completed',
       description: 'Constructed panel database combining macroeconomic variables, survey expectations, and central bank guidance for five EU countries and the US. Estimated 10-year term premia using survey-based methods and affine term structure models. Built Shiny web platform for personalized term premia estimates.',
       hasCode: true,
-      hasPaper: true
+      hasPaper: false,
+      hasArticle:false,
+      hasWebsite: true,
+      websiteLink: "https://devpra.shinyapps.io/Term_Premia/",
+      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
     },
     {
       title: 'Fragmentation Risk in the Eurozone Sovereign Bond Market',
@@ -40,7 +52,12 @@ const Research: React.FC = () => {
       status: 'Completed',
       description: 'Developed interactive RShiny dashboard to monitor real-time sovereign bond market fragmentation across Euro Area countries. Ingested market data via Python using Refinitiv APIs and processed macro-fundamentals in R to compute fundamental-implied yields and identify deviations in market pricing.',
       hasCode: true,
-      hasPaper: false
+      hasPaper: false,
+      hasArticle: true,
+      hasWebsite: true,
+      websiteLink: "http://devpra.shinyapps.io/IEP-Yields-vs-Bounds",
+      articleLink: "https://iep.unibocconi.eu/publications/ecb-and-tpi-how-measure-fragmentation-risk-eurozone-sovereign-bond-market",
+      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
     }
   ]
 
@@ -67,17 +84,48 @@ const Research: React.FC = () => {
       </p>
       
       <div className="flex gap-3">
-        {project.hasPaper && (
-          <button className="btn-primary text-sm">
+        {project.hasPaper && project.paperLink && (
+          <a
+            href={project.paperLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-sm inline-flex items-center"
+          >
             <FileText className="h-4 w-4 mr-2" />
             Paper
-          </button>
+          </a>
         )}
-        {project.hasCode && (
-          <button className="btn-secondary text-sm">
+        {project.hasArticle && project.articleLink && (
+          <a
+            href={project.articleLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-sm inline-flex items-center"
+          >
+            <FileText className="h-4 w-4 mr-2" />
+            Article
+          </a>
+        )}
+        {project.hasCode && project.codeLink && (
+          <a
+            href={project.codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary text-sm inline-flex items-center"
+          >
             <Code className="h-4 w-4 mr-2" />
             Code
-          </button>
+          </a>
+        )}
+        {project.hasWebsite && project.websiteLink && (
+          <a
+            href={project.websiteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-accent text-sm inline-flex items-center"
+          >
+            🌐 Website
+          </a>
         )}
       </div>
     </div>
@@ -157,7 +205,7 @@ const Research: React.FC = () => {
             
             <div>
               <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
-                Technical Approach
+                Skills
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start">

@@ -2,12 +2,12 @@ import React from 'react'
 
 const Teaching: React.FC = () => {
   const skills = [
-    'DSGE Modeling',
-    'VAR Analysis', 
+    'Intertemporal Optimization',
     'Debt Sustainability',
+    'Stochastic Debt Dynamics',
     'Fiscal Multipliers',
-    'MATLAB/R',
-    'EViews'
+    'Debt Instruments',
+    'R'
   ]
 
   const responsibilities = [
@@ -98,10 +98,10 @@ const Teaching: React.FC = () => {
             </div>
           </div> */}
 
-          {/* Skills & Tools Covered */}
+          {/* Topics & Tools Covered */}
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              Skills & Tools Covered
+              Topics & Tools Covered
             </h4>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (

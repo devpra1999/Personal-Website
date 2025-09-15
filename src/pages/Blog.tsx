@@ -23,7 +23,7 @@ const Blog: React.FC = () => {
       title: 'Understanding Demographic Transitions and Fiscal Policy',
       description: 'Exploring how aging populations affect government debt dynamics and the challenges facing European economies in maintaining fiscal sustainability...',
       tags: ['Fiscal Policy', 'Demographics'],
-      substackUrl: 'https://yoursubstack.substack.com/p/demographic-transitions'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/demographic-transitions'
     },
     {
       id: '2',
@@ -33,7 +33,7 @@ const Blog: React.FC = () => {
       title: 'Random Matrix Theory in Portfolio Optimization',
       description: 'A practical guide to implementing Marchenko-Pastur denoising techniques for improving covariance matrix estimation in high-dimensional portfolio problems...',
       tags: ['Finance', 'Methods'],
-      substackUrl: 'https://yoursubstack.substack.com/p/random-matrix-theory'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/random-matrix-theory'
     },
     {
       id: '3',
@@ -43,7 +43,7 @@ const Blog: React.FC = () => {
       title: 'Central Bank Digital Currencies and Monetary Policy',
       description: 'Analyzing the potential implications of CBDCs for traditional monetary transmission mechanisms and financial stability considerations...',
       tags: ['Monetary Policy', 'Fintech'],
-      substackUrl: 'https://yoursubstack.substack.com/p/cbdc-monetary-policy'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/cbdc-monetary-policy'
     },
     {
       id: '4',
@@ -53,7 +53,7 @@ const Blog: React.FC = () => {
       title: 'Building Interactive Economic Dashboards with RShiny',
       description: 'Step-by-step guide to creating real-time economic monitoring tools using RShiny, with examples from sovereign bond market analysis...',
       tags: ['R', 'Visualization'],
-      substackUrl: 'https://yoursubstack.substack.com/p/rshiny-dashboards'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/rshiny-dashboards'
     },
     {
       id: '5',
@@ -63,7 +63,7 @@ const Blog: React.FC = () => {
       title: 'The Future of Economic Research: AI and Natural Language Processing',
       description: 'Reflecting on how machine learning techniques are transforming empirical economics and the opportunities for sentiment analysis in financial markets...',
       tags: ['AI/ML', 'Research'],
-      substackUrl: 'https://yoursubstack.substack.com/p/ai-economics-research'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/ai-economics-research'
     },
     {
       id: '6',
@@ -73,7 +73,7 @@ const Blog: React.FC = () => {
       title: 'Term Structure Modeling: From Theory to Practice',
       description: 'Bridging the gap between affine term structure models and practical implementation, with insights from Euro Area and US government bond markets...',
       tags: ['Term Structure', 'Bonds'],
-      substackUrl: 'https://yoursubstack.substack.com/p/term-structure-modeling'
+      substackUrl: 'https://devprakashsrivastava.substack.com/p/term-structure-modeling'
     }
   ]
 
@@ -152,7 +152,7 @@ const Blog: React.FC = () => {
             and methodology discussions delivered directly to your inbox.
           </p>
           <a
-            href="https://yoursubstack.substack.com"
+            href="https://devprakashsrivastava.substack.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors"

@@ -41,15 +41,14 @@ const Home: React.FC = () => {
               optimization.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              My research interests span the intersection of demographics, fiscal sustainability, 
-              and financial markets, which I approach through rigorous empirical analysis and 
+              My research interests span monetary policy, fiscal sustainability, demographics
+              and financial econometrics, which I approach through rigorous statistical analysis and modern
               computational methods. My current research looks at how demographic transitions 
-              influence long-term economic trends and financial stability.
+              influence long-term economic trends and fiscal stability.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               As I prepare to apply for PhD programs in Economics, I'm also exploring adjacent 
-              fields such as economic history and the application of computational methods to 
-              traditional economic questions.
+              fields such as economic history and behavioral macroeconomics.
             </p>
           </div>
           
