@@ -53,8 +53,7 @@ const About: React.FC = () => {
                   Sept 2022 – Dec 2024 | GPA: 108/110
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
-                  Specialized in macroeconometrics, monetary policy, and financial 
-                  econometrics with a focus on term structure modeling and demographic economics.
+                  Courses in macroeconometrics, monetary policy, economic history and statistical methods
                 </p>
               </div>
               
@@ -85,8 +84,7 @@ const About: React.FC = () => {
                   July 2017 – June 2022 | GPA: 8.3/10
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
-                  Strong foundation in mathematics, statistics, and computational methods 
-                  with dual degree completion.
+                  Strong foundation in mathematics, statistics, and computational methods.
                 </p>
               </div>
             </div>
@@ -136,7 +134,7 @@ const About: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>Demographic Economics</span>
+                  <span>Economic History</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>

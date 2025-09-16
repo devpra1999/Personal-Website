@@ -41,8 +41,7 @@ const Footer: React.FC = () => {
               Dev Prakash Srivastava
             </h3>
             <p className="text-blue-100 mb-6 text-sm leading-relaxed">
-              Economics researcher specializing in macroeconomics, financial econometrics, 
-              and demographic economics. PhD applicant passionate about quantitative analysis and 
+              Economics researcher specializing in macroeconomics and financial econometrics. PhD applicant passionate about quantitative analysis and 
               policy research.
             </p>
             <div className="flex space-x-4">

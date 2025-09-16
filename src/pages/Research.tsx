@@ -138,7 +138,7 @@ const Research: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="section-heading">Research</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Current research projects spanning demographic economics, financial 
+            Current research projects spanning fiscal macroeconomics, financial 
             econometrics, and quantitative finance
           </p>
         </div>
@@ -175,7 +175,7 @@ const Research: React.FC = () => {
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <div>
-                    <span className="font-medium text-gray-900 dark:text-white">Demographic Economics</span>
+                    <span className="font-medium text-gray-900 dark:text-white">Fiscal Macroeconomics</span>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Fiscal sustainability and population dynamics</p>
                   </div>
                 </li>
@@ -187,17 +187,17 @@ const Research: React.FC = () => {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium text-gray-900 dark:text-white">Portfolio Optimization</span>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Random matrix theory and hierarchical clustering</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">Machine Learning in Finance</span>
                     <p className="text-sm text-gray-600 dark:text-gray-400">NLP applications and sentiment analysis</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div>
+                    <span className="font-medium text-gray-900 dark:text-white">Portfolio Optimization</span>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Random matrix theory and hierarchical clustering</p>
                   </div>
                 </li>
               </ul>
