@@ -36,14 +36,13 @@ const Home: React.FC = () => {
           {/* Description */}
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I am an Economics Researcher at Bocconi University, specializing in macroeconomics and financial econometrics. My research leverages advanced quantitative modeling—including modern Natural Language Processing (NLP) and Large Language Models (LLMs)—to analyze economic trends and financial markets. 
-              I have extensive expertise in econometric analysis, term structure modeling ,and portfolio optimization
+              I am an Economics Researcher at Bocconi University, specializing in macroeconomics and econometrics. My research leverages advanced quantitative modeling—including modern Natural Language Processing (NLP) and Large Language Models (LLMs)—to analyze economic trends and financial markets.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              My research interests span monetary policy, fiscal sustainability, demographics
-              and financial econometrics, which I approach through rigorous statistical analysis and modern
-              computational methods. My current research looks at how demographic transitions 
-              influence long-term economic trends and fiscal stability.
+              My research interests span monetary policy, fiscal sustainability,
+              and financial econometrics. My current research looks at how demographic transitions 
+              influence long-term economic trends and fiscal stability. 
+              I also have applied experience in quantitative finance, building portfolio optimization systems using Random Matrix Theory.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               As I prepare to apply for PhD programs in Economics, I'm also exploring adjacent 
