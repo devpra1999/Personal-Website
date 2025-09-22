@@ -36,8 +36,7 @@ const Home: React.FC = () => {
           {/* Description */}
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I am an economics researcher at Bocconi University specializing in macroeconomics and financial econometrics. I have extensive experience in quantitative modeling (including modern NLP and LLM techqniques), term structure analysis, and portfolio 
-              optimization.
+              I am an Economics Researcher at Bocconi University, specializing in macroeconomics and financial econometrics. My research leverages advanced quantitative modeling—including modern Natural Language Processing (NLP) and Large Language Models (LLMs)—to analyze economic trends and financial markets. I have extensive expertise in economometric analysis, term structure modeling ,and portfolio optimization
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
               My research interests span monetary policy, fiscal sustainability, demographics
