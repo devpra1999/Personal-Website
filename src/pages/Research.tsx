@@ -43,7 +43,7 @@ const Research: React.FC = () => {
       hasArticle:false,
       hasWebsite: true,
       websiteLink: "https://devpra.shinyapps.io/Term_Premia/",
-      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
+      codeLink: "https://github.com/devpra1999/TP-IRP-for-Euro-Area"
     },
     {
       title: 'Fragmentation Risk in the Eurozone Sovereign Bond Market',
@@ -57,7 +57,7 @@ const Research: React.FC = () => {
       hasWebsite: true,
       websiteLink: "http://devpra.shinyapps.io/IEP-Yields-vs-Bounds",
       articleLink: "https://iep.unibocconi.eu/publications/ecb-and-tpi-how-measure-fragmentation-risk-eurozone-sovereign-bond-market",
-      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
+      codeLink: "https://github.com/devpra1999/Fundament-Pricing-of-Euro-Area-Bonds"
     }
   ]
 
