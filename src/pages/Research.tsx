@@ -27,7 +27,7 @@ const Research: React.FC = () => {
       hasPaper: false,
       hasArticle:false,
       hasWebsite: false,
-      codeLink: "https://github.com/devpra1999/Demographic-Trends-and-Government-Debt-Dynamics"
+      codeLink: "https://github.com/devpra1999/Sentiment-RAG-FinBERT"
     }
   ]
 
