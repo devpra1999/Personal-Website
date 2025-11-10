@@ -50,7 +50,7 @@ const About: React.FC = () => {
                   Bocconi University, Italy
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  Sept 2022 – Dec 2024 | GPA: 108/110
+                  Sept 2022 – Dec 2024
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
                   Courses in macroeconometrics, monetary policy, economic history and statistical methods
@@ -65,7 +65,7 @@ const About: React.FC = () => {
                   IIT Kanpur, India
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  July 2021 – June 2022 | GPA: 9.64/10
+                  July 2021 – June 2022
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
                   Advanced coursework in econometrics, macroeconomic theory, and 
@@ -81,7 +81,7 @@ const About: React.FC = () => {
                   IIT Kanpur, India
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  July 2017 – June 2022 | GPA: 8.3/10
+                  July 2017 – June 2022
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">
                   Strong foundation in mathematics, statistics, and computational methods.
